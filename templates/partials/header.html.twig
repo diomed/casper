@@ -1,0 +1,13 @@
+<header class="site-header outer " style="background-image:  url('{{ page.media[page.header.primaryImage|first.name].url }}')">
+	<div class="inner">
+		<div class="site-header-content">
+			<h1 class="site-title">			
+				<img class="site-logo" src="{{ url('theme://assets/images/' ~ theme_config.logo) }}" alt="theme logo"/>              
+			</h1>
+			<h2 class="site-description">{{theme_config.tagline}}</h2>
+		</div>
+
+		{% include 'partials/navbar.html.twig' %}
+
+	</div>
+</header>

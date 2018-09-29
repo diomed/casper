@@ -1,0 +1,61 @@
+<article class="post-card home-template">
+    {% if page.media.images|first %}
+        <a class="post-card-image-link" href="{{post.url}}">
+            <div class="post-card-image" style="background-image: url({{page.media.images|first.url}})"></div>
+        </a>
+        {% elseif page.media.youtube %}
+        <a class="post-card-image-link" href="{{post.url}}">
+            <iframe width="600" height="403" src="{{ page.media.youtube }}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </a>
+        {% elseif page.media.soundcloud %}
+        <a class="post-card-image-link" href="{{post.url}}">
+            <iframe width="100%" height="403" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ page.header.soundcloud }}&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true&amp;buying=false"></iframe>
+        </a>
+        {% else %}
+        <a class="post-card-image-link" href="{{post.url}}">
+            <div class="post-card-image" style="background-image: url(https://source.unsplash.com/{{ theme_config.header.featured_image }})" alt="cover"></div>
+        </a>
+    {% endif %}
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="{{post.url}}">
+            <header class="post-card-header">
+                {% if primary_tag %}
+                    <span class="post-card-tags">{{primary_tag.name}}</span>
+                {% endif %}
+                <h2 class="post-card-title">{{post.title}}</h2>
+            </header>
+            <section class="post-card-excerpt">
+               {{ page.content | truncate(140, true) }}
+           </section>
+       </a>
+
+       {% if page.taxonomy.tag %}
+        <span class="tags">
+            {% for tag in page.taxonomy.tag %}
+                {% if not (grav.uri.param('chromeless')) %}
+                  <a class="p-category"><em>{{ tag }}</em></a>
+              {% endif %}
+          {% endfor %}
+      </span>
+  {% endif %}
+
+  <footer class="post-card-meta">
+    <ul class="author-list">
+        {% for author in authors  %}
+            <li class="author-list-item">
+                <div class="author-name-tooltip">
+                    {{name}}
+                </div>
+                {% if profile_image %}
+                    <a href="{{url}}" class="static-avatar"><img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" /></a>
+                    {% else %}
+                    <a href="{{url}}" class="static-avatar author-profile-image">{{icons_avatar}}</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    {#             <span class="reading-time">{reading_time}</span>
+    #}
+</footer>
+</div>
+</article>

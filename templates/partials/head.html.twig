@@ -1,0 +1,23 @@
+<meta charset="utf-8" />
+<title>{% if header.menu %}{{ header.menu|e('html') }}{% elseif header.title %}{{ header.title|e('html') }}{% endif %} | {{ site.title|e('html') }}</title>
+{% include 'partials/metadata.html.twig' %}
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+{% set image_parts = pathinfo(grav.theme.config.theme.favicon) %}
+<link rel="icon" type="image/png" href="{{ url('theme://images/favicon/favicon.png') }}" />
+<link rel="canonical" href="{{ page.url(true, true) }}" />
+{% block stylesheets %}
+	{% do assets.addCss('theme://css-compiled/spectre'~compress) %}
+	{% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
+	{% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
+	{% do assets.addCss('theme://assets/built/global.css') %}
+	{% do assets.addCss('theme://assets/built/screen.css') %}
+	{% do assets.addCss('theme://assets/built/screen.edited.css') %}
+	{% do assets.addCss('theme://assets/built/syntax.css') %}
+{% endblock %}
+{{ assets.css() }}
+{% block javascripts %}
+	{% do assets.addJs('jquery', 101) %}
+	{% do assets.addJs('theme://assets/js/infinitescroll.js', {group:'bottom'}) %}
+	{% do assets.addJs('theme://assets/js/jquery.fitvids.js', {group:'bottom'}) %}
+{% endblock %}
+{{ assets.js() }}

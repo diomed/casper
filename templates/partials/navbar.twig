@@ -1,0 +1,36 @@
+<nav class="site-nav">
+    <div class="site-nav-left">
+            {% if blog.logo %}{% if crumbs|length > 1 %}
+
+                <a class="site-nav-logo" href="{blog.url}"><img src="{blog.logo}" alt="{blog.title}" /></a>
+            {% else %}
+                <a class="site-nav-logo" href="{blog.url}">{blog.title}</a>
+            {% endif %}
+        {%if blog.navigation %}
+                <a class="navbar-item" href="{ base_url == '' ? '/' : base_url }">
+                    { config.site.title }
+                </a>
+
+        {% endif %}
+
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            {% if blog.facebook %}
+                <a class="social-link social-link-fb" href="{facebook_url blog.facebook}" target="_blank" rel="noopener">{{icons.fb}}</a>
+        {% endif %}
+            {% if blog.twitter %}
+                <a class="social-link social-link-tw" href="{twitter_url blog.twitter}" target="_blank" rel="noopener">{{icons.twitter}}</a>
+        {% endif %}
+        </div>
+        {% if labs.subscribers %}
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        {% else %}
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/{blog.url}/rss/" target="_blank" rel="noopener">{{rss}}</a>
+        {% endif %}
+
+                 {% block header_navigation %}
+                    {% include 'partials/navigation.html.twig' %}
+                {% endblock %}
+    </div>
+</nav>

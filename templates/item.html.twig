@@ -1,0 +1,46 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+    {% include 'partials/navbar.html.twig' %}
+    <div class="container">
+        <div class="inner">
+            <article class="post-full post ">
+                <header class="post-full-header">
+                    <section class="post-full-meta">
+                        <time class="post-full-meta-date" datetime="{{ post.date|date('F d. Y.') }}">{{ post.date|date('F d. Y.') }}</time>
+                    </section>
+                    <h1 class="post-full-title">{{ page.title }}</h1>
+                </header>
+                {% if page.media.images|first %}
+                <figure class="post-full-image" style="background-image: url({{page.media.images|first.url}})"></figure>
+                {% else %}
+                <figure class="post-full-image" style="background-image: url(https://source.unsplash.com/{{theme_config.header.featured_image}})" alt="cover">
+                </figure>
+                {% endif %}
+                <section class="post-full-content">
+                    <div class="kg-card-markdown">
+                     {{ page.content }}
+                    </div>
+                </section>
+                
+                {% if page.taxonomy.tag %}
+                  <div class="tags"> 
+                    {% for tag in page.taxonomy.tag %}
+                        <a href="{{ base_url }}/tag:{{ tag }}" class="center" rel="tag" ><mark>{{ tag }}</mark>
+                            {% if not loop.last %} {% endif %}</a>
+                    {% endfor %}
+            
+                {% endif %}
+
+            <aside class="read-next outer">
+                <div class="inner">
+                    <div class="read-next-feed">
+            			{% for post in page.find('/blog').children.order('publish_date', 'desc').slice(0, 2) %}
+                            {% include 'partials/post-mini.html.twig' %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </aside>
+        
+            {% include 'partials/share.html.twig' %}
+
+    {% endblock %}

@@ -30,7 +30,10 @@ Blog page should be blank - without any text.
 Under blog page you can create as many posts with page template `item` as you want. 
 This is how you populate your blog.
 
+- One more thing -
 
+This theme can create a page of type : archive.
+Page with that type shall list all your posts written so far.  
 
 
 ## Details

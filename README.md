@@ -7,7 +7,7 @@ grav theme
 
 
 You can change **logo** in **Themes » Casper 2**
-There you can also change social icons by writing only your id after site name.
+There you can also change social icons by writing only your id after site name.  
 You can also change favicon there, and **tagline** text.
 
 As you can see this theme uses images on header of every post.

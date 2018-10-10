@@ -25,7 +25,7 @@
                 {% if page.taxonomy.tag %}
                   <div class="tags"> 
                     {% for tag in page.taxonomy.tag %}
-                        <a href="{{ base_url }}/tag:{{ tag }}" class="center" rel="tag" ><mark>{{ tag }}</mark>
+                        <a href="{{ base_url }}/tag:{{ tag }}" class="center subscribe-button" rel="tag" >{{ tag }}
                             {% if not loop.last %} {% endif %}</a>
                     {% endfor %}
                    </div>

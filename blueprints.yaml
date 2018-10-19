@@ -5,9 +5,9 @@ icon: apple
 author:
   name: Seraphim Yaris
   url: https://www.buymeacoffee.com/zBl6OtuIM
-homepage: https://github.com/diomed/casper2
+homepage: https://github.com/diomed/casper
 keywords: Casper2, grav etc.
-bugs: https://github.com/diomed/casper2/issues
+bugs: https://github.com/diomed/casper/issues
 license: MIT
 
 form:

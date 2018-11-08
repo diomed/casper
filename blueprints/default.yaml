@@ -13,7 +13,7 @@ form:
           type: tab
           fields:
              header.primaryImage:
-              @ordering: 2
+              ordering: 2
               type: file
               label: 'Primary Image'
               multiple: false

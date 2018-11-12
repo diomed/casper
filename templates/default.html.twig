@@ -1,0 +1,27 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+	{% include 'partials/header.html.twig' %}
+
+	<main id="site-main" class="site-main outer" role="main">
+		<div class="inner">
+			<section class="subscribe-form">
+				<article class="post-full post ">
+
+					<section class="post-full-content">
+						<div class="kg-card-markdown">
+							{{ page.content }}
+						</div>
+					</section>
+				</section>
+			</article>
+
+			
+		</div>
+	</main>
+
+{% endblock %}
+
+{% do assets.addInlineJs('window.maxPages = ' ~ page.header.content.limit) %}
+{% do assets.addInlineJs(js) %}

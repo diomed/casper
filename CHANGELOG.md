@@ -2,6 +2,7 @@
 ## 12-11-2018
 - added default.twig.html
 - fixed a bug where theme wouldn't save posts
+- fixed title display on tab
 
 
 # 0.4

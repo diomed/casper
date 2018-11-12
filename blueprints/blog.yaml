@@ -4,103 +4,101 @@ title: blog
 child_type: item
 
 form:
-  fields:
-    tabs:
-      type: tabs
-      active: 1
-      fields:
-        content:
-          fields:
-            header.body_classes:
-              default: home-template
+    fields:
+        tabs:
+            type: tabs
+            active: 1
+            fields:
+                content:
+                    fields:
+                        header.body_classes:
+                            default: home-template
 
-      fields:
-        advanced:
-          fields:
-            overrides:
-              fields:
-                header.child_type:
-                  default: item
+                advanced:
+                    fields:
+                        overrides:
+                            fields:
+                                header.child_type:
+                                    default: item
 
-        blog:
-          type: tab
-          title: Blog Config
+                blog:
+                    type: tab
+                    title: Blog Config
 
-          fields:
+                    fields:
+                        content_title:
+                            type: spacer
+                            title: Content Definition
 
-            content_title:
-              type: spacer
-              title: Content Definition
+                        header.content.items:
+                            type: textarea
+                            yaml: true
+                            label: Items
+                            default: '@self.children'
+                            validate:
+                                type: yaml
 
-            header.content.items:
-              type: textarea
-              yaml: true
-              label: Items
-              default: '@self.children'
-              validate:
-                type: yaml
+                        header.automaton:
+                            type: markdown
+                            label: Automaton
+                            validate:
+                                type: textarea
 
-            header.automaton:
-              type: markdown
-              label: Automaton
-              validate:
-                type: textarea
+                        header.content.limit:
+                            type: text
+                            label: Max Item Count
+                            default: 5
+                            validate:
+                                required: true
+                                type: int
+                                min: 1
 
-            header.content.limit:
-              type: text
-              label: Max Item Count
-              default: 5
-              validate:
-                required: true
-                type: int
-                min: 1
+                        header.content.order.by:
+                            type: select
+                            label: Order By
+                            default: date
+                            options:
+                                folder: Folder
+                                title: Title
+                                date: Date
+                                default: Default
 
-            header.content.order.by:
-              type: select
-              label: Order By
-              default: date
-              options:
-                folder: Folder
-                title: Title
-                date: Date
-                default: Default
+                        header.content.order.dir:
+                            type: select
+                            label: Order
+                            default: desc
+                            options:
+                                asc: Ascending
+                                desc: Descending
 
-            header.content.order.dir:
-              type: select
-              label: Order
-              default: desc
-              options:
-                asc: Ascending
-                desc: Descending
+                        header.content.pagination:
+                            type: toggle
+                            label: Pagination
+                            highlight: 1
+                            default: 1
+                            options:
+                                1: PLUGIN_ADMIN.ENABLED
+                                0: PLUGIN_ADMIN.DISABLED
+                            validate:
+                                type: bool
 
-            header.content.pagination:
-              type: toggle
-              label: Pagination
-              highlight: 1
-              default: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-              validate:
-                type: bool
+                        header.taxonomy:
+                            type: taxonomy
+                            label: PLUGIN_ADMIN.TAXONOMY
+                            multiple: true
+                            validate:
+                                type: array
+                        header.content.url_taxonomy_filters:
+                            type: toggle
+                            label: URL Taxonomy Filters
+                            highlight: 1
+                            default: 1
+                            options:
+                                1: PLUGIN_ADMIN.ENABLED
+                                0: PLUGIN_ADMIN.DISABLED
+                            validate:
+                                type: bool
 
-            header.taxonomy:
-              type: taxonomy
-              label: PLUGIN_ADMIN.TAXONOMY
-              multiple: true
-              validate:
-                type: array
-            header.content.url_taxonomy_filters:
-              type: toggle
-              label: URL Taxonomy Filters
-              highlight: 1
-              default: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-              validate:
-                type: bool
-
-          import@:
-            type: partials/blog-bits
-            context: blueprints://pages
+                    import@:
+                        type: partials/blog-bits
+                        context: blueprints://pages

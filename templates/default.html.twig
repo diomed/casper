@@ -2,25 +2,21 @@
 
 {% block content %}
 
-	{% include 'partials/header.html.twig' %}
+    {% include 'partials/header.html.twig' %}
 
-	<main id="site-main" class="site-main outer" role="main">
-		<div class="inner">
-			<section class="subscribe-form">
-				<article class="post-full post ">
-
-					<section class="post-full-content">
-						<div class="kg-card-markdown">
-							{{ page.content }}
-						</div>
-					</section>
-				</section>
-			</article>
-
-			
-		</div>
-	</main>
-
+    <main id="site-main" class="site-main outer" role="main">
+        <div class="inner">
+            <section class="subscribe-form">
+                <article class="post-full post ">
+                    <section class="post-full-content">
+                        <div class="kg-card-markdown">
+                            {{ page.content }}
+                        </div>
+                    </section>
+                </article>
+            </section>
+        </div>
+    </main>
 {% endblock %}
 
 {% do assets.addInlineJs('window.maxPages = ' ~ page.header.content.limit) %}

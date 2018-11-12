@@ -1,3 +1,9 @@
+# 0.5
+## 12-11-2018
+- added default.twig.html
+- fixed a bug where theme wouldn't save posts
+
+
 # 0.4
 ## 19-10-2018
 

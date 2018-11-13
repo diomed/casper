@@ -6,7 +6,7 @@ Grav theme
 ## Notes
 As you can see, this theme uses images in the header of every post. <br>
 If you don't have an image set and ready, you can select a placeholder image from unsplash that will show as background. <br>
-That's what the **default card background image** is for. <br>  
+To do this, use the **default card background image** under theme options. <br>  
 You can find examples on how to set desired unsplash image or set of images that will change upon reloading on [unsplash](https://source.unsplash.com/)
 
 ...
@@ -24,7 +24,7 @@ You can find examples on how to set desired unsplash image or set of images that
     - Upload your own **primary Image** 
     - Hit **save**
 
-Now the blog page should be blank, without any text.
+The blog page should be blank, without any text.
 
 Under **blog page** you can now create as many posts with __page template **`item`**__ as you want. <br> 
 This is how you populate your blog.

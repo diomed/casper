@@ -1,4 +1,5 @@
 <?php
+
 namespace Grav\Theme;
 
 use Grav\Common\Theme;
@@ -32,13 +33,13 @@ class Casper extends Theme
 
         if (file_exists($manifest)) {
             $assets = json_decode(file_get_contents($manifest), true);
-            $this->grav['assets']->addJs('theme://dist/' . $assets['/js/app.js'],10);
-            $this->grav['assets']->addCss('theme://dist/' . $assets['/css/app.css'],10);
+            $this->grav['assets']->addJs('theme://dist/' . $assets['/js/app.js'], 10);
+            $this->grav['assets']->addCss('theme://dist/' . $assets['/css/app.css'], 10);
         }
 
         // Add jquery if debugger is enabled
         if ($this->config->get('system.debugger.enabled')) {
-            $this->grav['assets']->addJs('jquery',101);
+            $this->grav['assets']->addJs('jquery', 101);
         }
     }
 

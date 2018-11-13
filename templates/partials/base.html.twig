@@ -9,10 +9,10 @@
 <body class="{{ page.header.body_classes }}">
 
 {# Wrap content in #app to allow vue components #}
-<div id="app">       
+<div id="app">
     {% block content %}{% endblock %}
- </div>
-    {% include 'partials/footer.html.twig' %}
+</div>
+{% include 'partials/footer.html.twig' %}
 
 {% block bottom %}
     {{ assets.js('bottom') }}

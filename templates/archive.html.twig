@@ -1,18 +1,20 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
-	{% include 'partials/navbar.html.twig' %}
-	<div class="inner">
-		<section class="subscribe-form">
-			<h3 class="subscribe-form-title"> — {{page.title}} — </h3>
-			<ul class="none">
-				{% set this_year = "now"|date('Y') %}
-				{% for post in page.find('/blog').children.dateRange('01/01/' ~ this_year, '12/31/' ~ this_year).order('date', 'desc') %}
-					<li class="recent-posts">
-						<span>{{ post.date|date(system.pages.dateformat.short) }}</span>
-						<strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
-					</li>
-				{% endfor %}
-			</ul>
-		</section>
-	</div>
+    {% include 'partials/navbar.html.twig' %}
+    <div class="inner">
+        <section class="subscribe-form">
+            <h3 class="subscribe-form-title"> — {{ page.title }} — </h3>
+            <ul class="none">
+                {% set this_year = "now"|date('Y') %}
+                {% for post in page.find('/blog').children.dateRange('01/01/' ~ this_year, '12/31/' ~ this_year).order('date', 'desc') %}
+                    <li class="recent-posts">
+                        <span>{{ post.date|date(system.pages.dateformat.short) }}</span>
+                        <strong>
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        </strong>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
 {% endblock %}

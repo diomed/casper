@@ -1,40 +1,37 @@
 # Casper2 👻
-grav theme
+Grav theme
 
 ![Casper2 Theme](thumbnail.jpg)
 
-## Instructions
+## Notes
 
+You can change the **logo** in **Themes » Casper 2**. <br>
+You can change **social icons** by writing your **id** after the site name in the theme configuration.
+You can change the **favicon tagline** text there too. 
 
-You can change **logo** in **Themes » Casper 2**
-There you can also change social icons by writing only your id after site name.  
-You can also change favicon there, and **tagline** text.
-
-As you can see this theme uses images on header of every post.
-If you don't have image set and ready, you can select placeholder image from unsplash
-that will show as background instead. That's what **Default Card Background Image** is for.  
-You can find examples on how to set desired unsplash image or set of images that will change
-upon reload on https://source.unsplash.com/
+As you can see this theme uses images in the header of every post. <br>
+If you don't have an image set and ready, you can select a placeholder image from unsplash that will show as background. <br>
+That's what the **default card background image** is for.  
+You can find examples on how to set desired unsplash image or set of images that will change upon reload on https ://source.unsplash.com/
 
 ...
 
-## Important note:
+## Basic usage instructions:
 
-Create page of type : blog and go to Advanced.
-under `body-classes` write `home-template`
+- Create a page of type : **blog** and go to **Advanced** in the admin.
+- Under **`body-classes`** write **`home-template`**
+- While you're there, in blog page 
+    - Go to **content tab** 
+    - Upload your own **primary Image** 
+    - Hit **save**
 
-While you're there, in blog page - go to Content tab - upload your own **Primary Image** - and hit Save, of course.
+Now the blog page should be blank, without any text.
 
-Blog page should be blank - without any text.
-
-Under blog page you can create as many posts with page template `item` as you want. 
+Under **blog page** you can now create as many posts with __page template **`item`**__ as you want. 
 This is how you populate your blog.
 
-- One more thing -
-
-In this theme you can create a page of type : archive.
-Page with that type shall list all your posts written so far.  
-
+In this theme you can also create a page of type : **archive**.
+Pages with type **archive** will list all your posts written so far.  
 
 ## Details
 

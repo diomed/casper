@@ -4,19 +4,18 @@ Grav theme
 ![Casper2 Theme](thumbnail.jpg)
 
 ## Notes
-
-You can change the **logo** in **Themes » Casper 2**. <br>
-You can change **social icons** by writing your **id** after the site name in the theme configuration.
-You can change the **favicon tagline** text there too. 
-
-As you can see this theme uses images in the header of every post. <br>
+As you can see, this theme uses images in the header of every post. <br>
 If you don't have an image set and ready, you can select a placeholder image from unsplash that will show as background. <br>
-That's what the **default card background image** is for.  
-You can find examples on how to set desired unsplash image or set of images that will change upon reload on https ://source.unsplash.com/
+That's what the **default card background image** is for. <br>  
+You can find examples on how to set desired unsplash image or set of images that will change upon reloading on [unsplash](https://source.unsplash.com/)
 
 ...
 
 ## Basic usage instructions:
+
+- Change the **logo** in **Themes » Casper 2**. <br>
+- Change **social icons** by writing your **id** after the site name in the theme configuration. <br>
+- Change the **favicon tagline** text there too. 
 
 - Create a page of type : **blog** and go to **Advanced** in the admin.
 - Under **`body-classes`** write **`home-template`**
@@ -27,7 +26,7 @@ You can find examples on how to set desired unsplash image or set of images that
 
 Now the blog page should be blank, without any text.
 
-Under **blog page** you can now create as many posts with __page template **`item`**__ as you want. 
+Under **blog page** you can now create as many posts with __page template **`item`**__ as you want. <br> 
 This is how you populate your blog.
 
 In this theme you can also create a page of type : **archive**.

@@ -11,3 +11,20 @@ li{list-style-type: none}
 body::-webkit-scrollbar{width:10px}
 body::-webkit-scrollbar-thumb{border-radius:5px;background:rgba(0,0,0,0.2)}/*# sourceMappingURL=screen.css.map */
 html {scroll-behavior: smooth;}
+
+.flexbox-container {
+    display: flex;
+    margin-left:-25px;
+}
+
+.flexbox-container > span {
+	width: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flexbox-container > span:nth-child(2) {
+    display:flex;
+    justify-content:flex-start;
+}

@@ -10,10 +10,10 @@
                     <li class="recent-posts flexbox-container">
                         <span>{{ post.date|date(system.pages.dateformat.short) }}</span>
                         <span>
-                        <strong>
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                        </strong>
-                    </span>
+                            <strong>
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                            </strong>
+                        </span>
                     </li>
                 {% endfor %}
             </ul>

@@ -25,7 +25,7 @@
                     {#{% endif %}#}
                 {#{% endfor %} #}
 
-                {% for post in page.find('/blog').children.order('publish_date', 'desc') %}
+                {% for post in page.find('/blog').collection.order('publish_date', 'desc') %}
                     {% include 'partials/post-card.html.twig' with {page: post} %}
                 {% endfor %}
             </div>

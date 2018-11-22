@@ -1,3 +1,9 @@
+# 0.6
+## 22-11-2018
+
+- taxonomy implemented [now when you click on tag, it'll list all posts that contain it]
+- archives layout is now in collumns, looks much nicer
+
 # 0.5
 ## 12-11-2018
 

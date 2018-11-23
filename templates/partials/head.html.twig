@@ -26,5 +26,7 @@
     {% do assets.addJs('jquery', 101) %}
     {% do assets.addJs('theme://assets/js/infinitescroll.js', {group:'bottom'}) %}
     {% do assets.addJs('theme://assets/js/jquery.fitvids.js', {group:'bottom'}) %}
+    {% do assets.addJs('https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js', {group:'bottom'}) %}
+
 {% endblock %}
 {{ assets.js() }}

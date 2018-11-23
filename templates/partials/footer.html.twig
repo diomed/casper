@@ -38,7 +38,11 @@
 </footer>
 
 <script>
+    mediumZoom("#zoom-zoom img", 
+    {margin: 200, offset: 0,});
 
+	var scroll = new SmoothScroll('a[href*="#"]');
+    
     // NOTE: Scroll performance is poor in Safari
     // - this appears to be due to the events firing much more slowly in Safari.
     //   Dropping the scroll event and using only a raf loop results in smoother

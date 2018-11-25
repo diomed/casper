@@ -42,6 +42,12 @@
     {margin: 200, offset: 0,});
 
 	var scroll = new SmoothScroll('a[href*="#"]');
+	
+	tippy.setDefaults({
+        arrow: true,
+        delay: 40,
+        theme: 'light-border'
+      });
     
     // NOTE: Scroll performance is poor in Safari
     // - this appears to be due to the events firing much more slowly in Safari.

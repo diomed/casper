@@ -12,6 +12,11 @@ body::-webkit-scrollbar{width:10px}
 body::-webkit-scrollbar-thumb{border-radius:5px;background:rgba(0,0,0,0.2)}/*# sourceMappingURL=screen.css.map */
 html {scroll-behavior: smooth;}
 
+#app {
+  position: relative;
+  z-index: 0
+}
+
 .flexbox-container {
     display: flex;
     margin-left:-25px;

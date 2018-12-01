@@ -3,6 +3,7 @@
 
 - taxonomy implemented [now when you click on tag, it'll list all posts that contain it]
 - archives layout is now in columns, looks much nicer
+- medium like image zoom
 - smooth scroll to top
 
 # 0.5

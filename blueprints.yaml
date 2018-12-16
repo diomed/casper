@@ -1,5 +1,5 @@
 name: Casper 2
-version: 0.6
+version: 0.7
 description: my little ghost 👻 | this theme is port of famous Casper2 theme for ghost
 icon: apple
 author:
@@ -9,6 +9,8 @@ homepage: https://github.com/diomed/casper
 keywords: Casper2, grav etc.
 bugs: https://github.com/diomed/casper/issues
 license: MIT
+dependencies:
+    - { name: readingtime, version: '>=1.3.0' }
 
 form:
     validation: loose

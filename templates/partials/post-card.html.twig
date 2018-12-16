@@ -24,9 +24,9 @@
     <div class="post-card-content">
         <a class="post-card-content-link" href="{{ post.url }}">
             <header class="post-card-header">
-                {% if primary_tag %}
-                    <span class="post-card-tags">{{ primary_tag.name }}</span>
-                {% endif %}
+            {% if page.taxonomy.category %}
+                <span class="post-card-tags">{{page.taxonomy.category|join(', ')}}</span>
+            {% endif %}
                 <h2 class="post-card-title">{{ post.title }}</h2>
             </header>
             <section class="post-card-excerpt">
@@ -52,17 +52,15 @@
                             {{ name }}
                         </div>
                         {% if profile_image %}
-                            <a href="{{ url }}" class="static-avatar"><img class="author-profile-image" src="{{ profile_image }}"
-                                                                           alt="{{ name }}"/></a>
+                            <a href="{{ url }}" class="static-avatar">
+                            <img class="author-profile-image" src="{{ profile_image }}" alt="{{ name }}"/></a>
                         {% else %}
                             <a href="{{ url }}" class="static-avatar author-profile-image">{{ icons_avatar }}</a>
                         {% endif %}
                     </li>
                 {% endfor %}
             </ul>
-            {#
-            <span class="reading-time">{reading_time}</span>
-            #}
+            <span class="reading-time">{{ page.content|readingtime }}</span>
         </footer>
     </div>
 </article>

@@ -3,7 +3,7 @@
 
 - social icons fixed
 - apparently I forgot categories. oops! fixed now
-- something something 
+- oh right, integrated readingtime :P
 
 
 # 0.6

@@ -1,3 +1,11 @@
+# 0.7
+## 17-12-2018
+
+- social icons fixed
+- apparently I forgot categories. oops! fixed now
+- something something 
+
+
 # 0.6
 ## 30-11-2018
 

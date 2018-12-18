@@ -8,6 +8,17 @@ li{list-style-type: none}
 .center {display: flex; justify-content: center;}
 .tags {display: flex; justify-content: space-around;} 
 .p-category{background:#fafafa; border-radius: 4px; padding: 5px}
+.reading-time {
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	margin-left: 20px;
+	color: #738a94;
+	font-size: 1.2rem;
+	line-height: 33px;
+	font-weight: 500;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+}
 body::-webkit-scrollbar{width:10px}
 body::-webkit-scrollbar-thumb{border-radius:5px;background:rgba(0,0,0,0.2)}/*# sourceMappingURL=screen.css.map */
 html {scroll-behavior: smooth;}

@@ -2,6 +2,7 @@
 {% block content %}
     {% include 'partials/navbar.html.twig' %}
 <div class="container">
+<main id="site-main" class="site-main outer">
     <div class="inner">
         <article class="post-full post">
             <header class="post-full-header">
@@ -38,7 +39,7 @@
                 <div class="inner">
                     <div class="read-next-feed">
                         {% for post in page.find('/blog').children.order('publish_date', 'desc').slice(0, 2) %}
-                            {% include 'partials/post-mini.html.twig' %}
+                            {% include 'partials/post-mini.html.twig'with {page: post} %}
                         {% endfor %}
                     </div>
                 </div>
@@ -46,6 +47,7 @@
 
             {% include 'partials/share.html.twig' %}
             </div>
+            </main>
 
 </div>
             {% endblock %}

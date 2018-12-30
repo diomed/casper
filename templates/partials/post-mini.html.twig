@@ -1,11 +1,14 @@
 <article class="post-card home-template {{ page.home ? 'home-template' }}">
-    {% if feature_image %}
+    {% if page.media.images|first %}
         <a class="post-card-image-link" href="{{ post.url }}">
-            <div class="post-card-image" style="background-image: url({{ feature_image }})" alt="{{ post.title }}"></div>
+            <div class="post-card-image" style="background-image: url({{ page.media.images|first.url }})" alt="{{ post.title }}"></div>
         </a>
     {% else %}
-        <div class="post-card-image"
-             style="background-image: url(https://source.unsplash.com/{{ theme_config.header.featured_image }})" alt="cover"></div>
+        <a class="post-card-image-link" href="{{ post.url }}">
+            <div class="post-card-image"
+                 style="background-image: url(https://source.unsplash.com/{{ theme_config.header.featured_image }})" alt="cover">
+            </div>
+        </a>
     {% endif %}
     <div class="post-card-content">
         <a class="post-card-content-link" href="{{ post.url }}">

@@ -1,5 +1,5 @@
-#0.8
-##03-01-2019
+# 0.8
+## 03-01-2019
 
 - bunch of fixes [make theme look more like original]
 

@@ -72,7 +72,7 @@ This command will check your Grav install to see if your Gateway theme is due fo
 
 Manually updating theme is pretty simple. Here is what you will need to do to get this done:
 
-* Delete the `your/site/user/themes/clean-blog` directory.
+* Delete the `your/site/user/themes/casper2` directory.
 * Download the new version of theme from this repository.
 * Unzip the zip file in `your/site/user/themes` and rename the resulting folder to `casper2`.
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.

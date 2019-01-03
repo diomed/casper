@@ -1,3 +1,9 @@
+#0.8
+##03-01-2019
+
+- bunch of fixes [make theme look more like original]
+
+
 # 0.7
 ## 17-12-2018
 

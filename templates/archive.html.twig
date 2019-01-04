@@ -6,7 +6,7 @@
             <h3 class="subscribe-form-title"> — {{ page.title }} — </h3>
             <ul class="none">
                 {% set this_year = "now"|date('Y') %}
-                {% for post in page.find('/blog').children.dateRange('01/01/' ~ this_year, '12/31/' ~ this_year).order('date', 'desc') %}
+                {% for post in page.find('/blog').children.dateRange('01/01/' ~ last_year, '12/31/' ~ this_year).order('date', 'desc') %}
                     <li class="recent-posts flexbox-container">
                         <span>{{ post.date|date(system.pages.dateformat.short) }}</span>
                         <span>

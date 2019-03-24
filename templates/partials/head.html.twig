@@ -27,12 +27,9 @@
 
 {% endblock %}
 
-
   {% block assets deferred %}
     {{ assets.css()|raw }}
       {{ assets.js()|raw }}
   {% endblock %}
     
-    {% endblock head %}
-
-{{ assets.js('bottom')|raw }} 
+    {% endblock head %}    

@@ -24,10 +24,9 @@
                         {#{% endif %}#}
                     {#{% endif %}#}
                 {#{% endfor %} #}
-
-                {% for post in page.find('/blog').collection.order('publish_date', 'desc') %}
-                    {% include 'partials/post-card.html.twig' with {page: post} %}
-                {% endfor %}
+            {% for post in page.collection.order('publish_date', 'desc') %}
+                  {% include 'partials/post-card.html.twig' with {page: post} %}
+            {% endfor %}
             </div>
         </div>
     </main>

@@ -7,7 +7,7 @@
         </section>
         <section class="poweredby">{{ theme_config.footer }}</section>
         <nav class="site-footer-nav">
-            <a href="{{ base_url == '' ? '/' : base_url }}/archive">Post Archive</a>
+            <a href="{{ base_url == '' ? '/' : base_url }}archive">{{ "THEME_CASPER.POST_ARCHIVE"|t }}</a>
             {% if blog.facebook %}
                 <a class="social-link social-link-fb" href="{facebook_url blog.facebook}" target="_blank" rel="noopener">{{ icons.fb }}</a>
             {% endif %}
@@ -32,7 +32,7 @@
                     </a>
                 </li>
             {% endif %}
-            <a href="#">To Top</a>
+            <a href="#">{{ "THEME_CASPER.TO_TOP"|t }}</a>
         </nav>
     </div>
 </footer>

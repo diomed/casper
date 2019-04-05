@@ -1,3 +1,8 @@
+# 0.9.5
+## 05-04-2019
+- apparently this can be multilingual now (French) is there.
+also some minor fix
+
 # 0.9
 ## 27-03-2019
 

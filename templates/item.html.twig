@@ -14,7 +14,7 @@
                 <h1 class="post-full-title">{{ page.title }}</h1>
             </header>
             {% if page.media.images|first %}
-                <figure class="post-full-image" style="background-image: url({{ page.media.images|first.url }})"></figure>
+                <figure class="post-full-image" style="background-image: url({{ page.media.images|first.url|escape('css') }})"></figure>
             {% else %}
                 <figure class="post-full-image"
                         style="background-image: url(https://source.unsplash.com/{{ theme_config.header.featured_image }})" alt="cover">

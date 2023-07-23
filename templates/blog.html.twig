@@ -8,6 +8,8 @@
         <div class="inner">
             <div class="post-feed">
 
+            {{ page.content|raw }}
+
                 {# Added display of featured post - hibbittsdesign.org #}
                 {#{% for post in taxonomy.findTaxonomy({'tag': "featured"}) %}#}
                     {#{% if (post.header.hide_from_post_list != true) and (post.parent.slug == page.slug) %}#}

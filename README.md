@@ -34,7 +34,7 @@ Pages with type **archive** will list all your posts written so far.
 
 ## Details
 
-This Grav theme is port of a MIT theme for ghost.
+This Grav theme is port of a Casper theme for ghost, which is released under MIT licence.
 
 ### GPM Installation (Preferred)
 

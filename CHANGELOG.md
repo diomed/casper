@@ -1,13 +1,26 @@
+# 1.0.1
+## 07-12-2023
+
+- more twig strict mode compatibility
+- do not depend on external services if you can host your assets yourself
+- minor code style enhancements
+- version bump
+
+# 1.0.0
+## 23-07-2023
+
+- twig strict mode compatibility
+
 # 0.9.5
 ## 05-04-2019
+
 - apparently this can be multilingual now (French) is there.
-also some minor fix
+- also some minor fixes
 
 # 0.9
 ## 27-03-2019
 
 - some changes related to important theme updates
-and then some
 
 
 # 0.8

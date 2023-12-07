@@ -30,7 +30,7 @@
                 <h2 class="post-card-title">{{ post.title }}</h2>
             </header>
             <section class="post-card-excerpt">
-                {{ page.content | truncate(140, true) }}
+                {{ page.content|truncate(140, true)|raw }}
             </section>
         </a>
 

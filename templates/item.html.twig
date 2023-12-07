@@ -34,20 +34,19 @@
                     {% endfor %}
                 </div>
             {% endif %}
-</article>
-            <aside class="read-next outer">
-                <div class="inner">
-                    <div class="read-next-feed">
-                        {% for post in page.find('/blog').children.order('publish_date', 'desc').slice(0, 2) %}
-                            {% include 'partials/post-mini.html.twig'with {page: post} %}
-                        {% endfor %}
-                    </div>
+        </article>
+        <aside class="read-next outer">
+            <div class="inner">
+                <div class="read-next-feed">
+                    {% for post in page.find('/blog').children.order('publish_date', 'desc').slice(0, 2) %}
+                        {% include 'partials/post-mini.html.twig'with {page: post} %}
+                    {% endfor %}
                 </div>
-            </aside>
-
-            {% include 'partials/share.html.twig' %}
             </div>
-            </main>
+        </aside>
 
+        {% include 'partials/share.html.twig' %}
+    </div>
+</main>
 </div>
-            {% endblock %}
+{% endblock %}

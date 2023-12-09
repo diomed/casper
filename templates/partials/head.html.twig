@@ -15,11 +15,13 @@
     {% do assets.addCss('theme://assets/built/screen.css') %}
     {% do assets.addCss('theme://assets/built/screen.edited.css') %}
     {% do assets.addCss('theme://assets/built/syntax.css') %}
+    {% do assets.addCss('theme://assets/built/medium-zoom.css') %}
+
 {% endblock %}
 
 {% block javascripts %}
     {% do assets.addJs('jquery', 101) %}
-    {% do assets.addJs('theme://assets/js/medium-zoom-1.0.2.min.js') %}
+    {% do assets.addJs('theme://assets/js/medium-zoom-1.1.0.min.js') %}
     {% do assets.addJs('theme://assets/js/tippy.all.3.0.0.min') %}
     {% do assets.addJs('theme://assets/js/smooth-scroll.polyfills.14.2.1.min.js', 101) %}
     {% do assets.addJs('theme://assets/js/jquery.fitvids.js', {group:'bottom'}) %}
